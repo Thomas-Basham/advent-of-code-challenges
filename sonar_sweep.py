@@ -2,17 +2,19 @@
 ***** Linked List class *****
 
 Functions:
- * Insert nodes
-    - @param {value} any values
-    - returns nothing
+ * Insert
+    inserts a single node into the linked list
+     with the Node class
+      - @param {value} any values
+      - returns nothing
 
- * TODO: "scan" nodes for a count of increases inside
-    Scan for Increases
+ * sweep
+    Scans for Increases on in the linked list
       - returns nothing
 
  * __str__
-    - returns string such as  "{ 199 } -> { 200 } -> { 208 } -> NULL"
-
+      - returns string such as  "{ 199 } -> { 200 } -> { 208 } -> NULL"
+      - called with str(LinkedList())
 """
 
 
