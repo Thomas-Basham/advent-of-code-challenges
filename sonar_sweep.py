@@ -3,13 +3,14 @@
 
 Functions:
  * Insert
-    inserts a single node into the linked list
-     with the Node class
-      - @param {value} any values
+    inserts a single node into the linked list with the Node class
+      - accepts: value
       - returns nothing
 
  * sweep
-    Scans for Increases on in the linked list
+    Scans for Increases in the linked list, starting from the head
+      - accepts: nothing
+      - increments self.count
       - returns nothing
 
  * __str__
@@ -24,6 +25,7 @@ class LinkedList:
     self.head = None
     self.value = None
     self.next = next
+    self.count = 0
 
   def insert(self, value):
     new_node = Node(value)
@@ -42,6 +44,24 @@ class LinkedList:
     while nodes:
       return ' -> '.join('{ ' + str(node) + ' }' for node in nodes) + ' -> NULL'
     return "NULL"
+
+  def sweep(self):
+    current = self.head
+
+    while current.next:
+      if current.next.value > current.value:
+        self.count += 1
+
+        next_ = current.next
+        current = next_
+
+      if not current.next:
+        return
+
+      if current.next.value <= current.value:
+        next_ = current.next
+        current = next_
+    return
 
 
 class Node:

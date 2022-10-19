@@ -6,6 +6,7 @@ This report indicates that, scanning outward from the submarine, the sonar sweep
 so on.
 
 The first order of business is to figure out how quickly the depth increases, just so you know what you're dealing with
+
 - you never know if the keys will get carried into deeper water by an ocean current or a fish or something.
 
 To do this, count the number of times a depth measurement increases from the previous measurement. (There is no
@@ -43,8 +44,15 @@ How many measurements are larger than the previous measurement?
 
 ## Approach
 
-My approach to solving this problem is to use a linked list class.
+I used Python to solve this challenge.
+
+My approach to solving this was to use a linked list class.
 I iterated over the lined list while maintaining reference to the
 current and next nodes. I used a counter and incremented it as there
 were an increase, and kept iterating if there wasn't. When the last node
 is reached, the loop ends.
+
+Another problem I had to solve was getting the challenge inputs
+into a list format. There were a number of ways I thought of doing this, I could have created
+a text file and iterated through each line to make a list. I decided to use a docstring with the
+inputs copied inside. I used python's split method to convert the docstring into a list.
