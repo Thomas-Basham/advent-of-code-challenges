@@ -23,7 +23,7 @@ Functions:
  * sliding_sum
     https://stackoverflow.com/questions/38507672/summing-elements-in-a-sliding-window-numpy
     https://numpy.org/doc/stable/reference/generated/numpy.convolve.html
-    uses numpy to convolve a list by a sliding window of 3 nodes' sum
+    uses numpy to convolve a list of integers by a sliding window of 3 nodes' sum
       - accepts: list of integers
       - inserts convolved list into linked list
       - returns: nothing
