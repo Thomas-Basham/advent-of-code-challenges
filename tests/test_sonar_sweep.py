@@ -80,14 +80,13 @@ def test_sweep_sliding_sum_challenge_case():
   assert actual == expected
 
 
-
 def challenge_case():
 
   # make a list of strings separted by lines
   converted = challenge_input.split('\n')
 
   # remove empty values
-  while ("" in converted):
+  while "" in converted:
     converted.remove("")
 
   # convert strings to numbers
