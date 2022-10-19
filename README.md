@@ -1,4 +1,4 @@
-# advent-of-code-challenges
+# Advent of Code Challenge
 
 ## Challenge: --- Day 1: Sonar Sweep ---
 
