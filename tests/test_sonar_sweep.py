@@ -1,5 +1,5 @@
 from sonar_sweep import LinkedList
-from challenge_input import challenge_input
+from challenge_input import challenge_input, test_case, edge_case_same_number
 
 def test_linked_list_exists():
   assert LinkedList()
@@ -79,37 +79,6 @@ def test_sweep_sliding_sum_challenge_case():
   expected = 1150
   assert actual == expected
 
-
-test_case = [
-  199,
-  200,
-  208,
-  210,
-  200,
-  207,
-  240,
-  269,
-  260,
-  263
-]
-
-edge_case_same_number = [
-  199,
-  200,
-  208,
-  210,
-  200,
-  207,
-  207,
-  207,
-  207,
-  207,
-  207,
-  240,
-  269,
-  260,
-  263
-]
 
 
 def challenge_case():
