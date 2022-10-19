@@ -1,6 +1,6 @@
 # advent-of-code-challenges
 
---- Day 1: Sonar Sweep ---
+## Challenge: --- Day 1: Sonar Sweep ---
 
 This report indicates that, scanning outward from the submarine, the sonar sweep found depths of 199, 200, 208, 210, and
 so on.
@@ -53,6 +53,34 @@ were an increase, and kept iterating if there wasn't. When the last node
 is reached, the loop ends.
 
 Another problem I had to solve was getting the challenge inputs
-into a list format. There were a number of ways I thought of doing this, I could have created
+into a list format. There were a number of ways I thought of doing this. I could have created
 a text file and iterated through each line to make a list. I decided to use a docstring with the
 inputs copied inside. I used python's split method to convert the docstring into a list.
+
+## Installation
+
+To install:
+
+- clone this repo into your machine
+- create and activate a virtual environment
+  - Run these scripts:
+
+        $ python -m venv .venv
+        $ source .venv/bin/activate
+- Install dependencies
+  - Run:
+
+        $ pip install -r requirements.txt
+
+## Tests
+
+To run all tests use:
+
+        $ pytest
+
+To run challenge test use:
+
+        $ pytest tests/test_sonar_sweep.py::test_sweep_challenge_case
+
+
+
