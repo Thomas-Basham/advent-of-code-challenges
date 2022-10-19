@@ -1,5 +1,6 @@
 from sonar_sweep import LinkedList
 from challenge_input import challenge_input, test_case, edge_case_same_number
+import pytest
 
 def test_linked_list_exists():
   assert LinkedList()
@@ -76,6 +77,24 @@ def test_sweep_sliding_sum_challenge_case():
   linked_list.sweep()
 
   actual = linked_list.count
+  expected = 1150
+  assert actual == expected
+
+
+def test_found_part_2_solution():
+  # someone else wrote this solution, linked below.
+  # I liked this solution, for how simple it is and how clean it looks
+  # I wanted to see how the solution I wrote measured against it in speed.
+  # run $ pytest --durations=1 to see
+  # https://github.com/YokiDiabeul/advent_of_code/blob/a296b7efc58d309722048667b978ad5f87edd770/day%201/1.py
+
+  # part one
+  def count_bigger_in_list(inputs):
+    return sum([inputs[i - 1] < inputs[i] for i in range(1, len(inputs))])
+
+  part_two = [challenge_case()[i - 2] + challenge_case()[i - 1] + challenge_case()[i] for i in range(2, len(challenge_case()))]
+
+  actual = count_bigger_in_list(part_two)
   expected = 1150
   assert actual == expected
 
