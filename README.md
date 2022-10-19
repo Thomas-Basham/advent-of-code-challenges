@@ -52,8 +52,8 @@ current and next nodes. I used a counter and incremented it as there
 were an increase, and kept iterating if there wasn't. When the last node
 is reached, the loop ends.
 
-Another problem I had to solve was getting the challenge inputs
-into a list format. There were a number of ways I thought of doing this. I could have created
+Another task was retrieving the challenge inputs and converting them
+into a list. There were a number of ways I thought of doing this. I could have created
 a text file and iterated through each line to make a list. I decided to use a docstring with the
 inputs copied inside. I used python's split method to convert the docstring into a list.
 
