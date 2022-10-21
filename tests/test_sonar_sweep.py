@@ -1,6 +1,6 @@
 from sonar_sweep import LinkedList
 from challenge_input import challenge_input, test_case, edge_case_same_number
-import pytest
+
 
 def test_linked_list_exists():
   assert LinkedList()
