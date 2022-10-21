@@ -146,7 +146,7 @@ To run all tests use:
 
         $ pytest
 
-To run challenge test use:
+To run part 1 challenge test use:
 
         $ pytest tests/test_sonar_sweep.py::test_sweep_challenge_case
 
