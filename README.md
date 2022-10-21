@@ -2,6 +2,10 @@
 
 [![Python application](https://github.com/Thomas-Basham/advent-of-code-challenges/actions/workflows/python-app.yml/badge.svg?branch=main)](https://github.com/Thomas-Basham/advent-of-code-challenges/actions/workflows/python-app.yml)
 
+### [Solution](sonar_sweep.py)
+
+### [Tests](tests/test_sonar_sweep.py)
+
 ## Challenge: Day 1: Sonar Sweep
 
 This report indicates that, scanning outward from the submarine, the sonar sweep found depths of 199, 200, 208, 210, and
@@ -44,7 +48,7 @@ How many measurements are larger than the previous measurement?
     Output:
     7
 
---- Part Two ---
+-------- Part Two --------
 
 Considering every single measurement isn't as useful as you expected: there's just too much noise in the data.
 
