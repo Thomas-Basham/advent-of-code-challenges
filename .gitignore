@@ -235,4 +235,9 @@ __pycache__
 poetry.lock
 .idea
 
+.markdownlint.json
+.eslintrc.json
+.eslintignore
+.editorconfig
+
 # End of https://www.gitignore.io/api/node,macos,linux,windows,webstorm,visualstudiocode
