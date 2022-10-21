@@ -6,26 +6,6 @@ def test_linked_list_exists():
   assert LinkedList()
 
 
-def test_add_one():
-  linked_list = LinkedList()
-
-  linked_list.insert(test_case[0])
-
-  actual = str(linked_list)
-  expected = '{ 199 } -> NULL'
-  assert actual == expected
-
-
-def test_add_test_case():
-  linked_list = LinkedList()
-
-  linked_list.insert_many(test_case)
-
-  actual = str(linked_list)
-  expected = '{ 199 } -> { 200 } -> { 208 } -> { 210 } -> { 200 } -> { 207 } -> { 240 } -> { 269 } -> { 260 } -> { 263 } -> NULL'
-  assert actual == expected
-
-
 def test_sweep():
   linked_list = LinkedList()
 

@@ -28,10 +28,6 @@ Functions:
       - accepts: list of integers
       - inserts convolved list into linked list
       - returns: nothing
-
- * __str__
-    returns string representation of linked list such as  "{ 199 } -> { 200 } -> { 208 } -> NULL"
-      - called with str(LinkedList())
 """
 
 
@@ -71,19 +67,6 @@ class LinkedList:
     convolved_nums_list = np.convolve(nums_list, np.ones(3, dtype=int), 'valid')
     self.insert_many(convolved_nums_list)
 
-  def __str__(self):
-    current = self.head
-    nodes = []
-
-    while current:
-      nodes.append(current.value)
-      current = current.next
-
-    while nodes:
-      return ' -> '.join('{ ' + str(node) + ' }' for node in nodes) + ' -> NULL'
-
-    return "NULL"
-
 
 class Node:
   def __init__(self, value=None, next_node=None):
@@ -112,6 +95,7 @@ def convert_challenge_case(test_case):
 
 
 # ****************** SOLUTION DRIVER CODE ******************
+#             to run: $ python sonar_sweep.py
 if __name__ == "__main__":
   def sonar_sweep_part_1():
     linked_list = LinkedList()
@@ -119,7 +103,7 @@ if __name__ == "__main__":
     linked_list.insert_many(convert_challenge_case(challenge_input))
     linked_list.sweep()
 
-    print(f"PART 1: There are {linked_list.count} that are larger than the previous measurement")
+    print(f"PART 1: There are {linked_list.count} measurements that are larger than the previous measurement")
     return linked_list.count
 
 
@@ -129,7 +113,7 @@ if __name__ == "__main__":
     linked_list.sliding_sum(convert_challenge_case(challenge_input))
     linked_list.sweep()
 
-    print(f"PART 2: There are {linked_list.count} that are larger than the previous measurement")
+    print(f"PART 2: There are {linked_list.count} measurements that are larger than the previous measurement")
     return linked_list.count
 
 
