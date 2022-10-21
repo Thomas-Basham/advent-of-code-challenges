@@ -1,4 +1,5 @@
 import numpy as np
+from challenge_input import challenge_input
 
 """
 ***** Linked List class *****
@@ -88,3 +89,49 @@ class Node:
   def __init__(self, value=None, next_node=None):
     self.value = value
     self.next = next_node
+
+
+def convert_challenge_case(test_case):
+  """
+  * convert challenge case
+    - accepts: a test case copied from https://adventofcode.com/2021/day/1/input
+    - returns: a list of integers
+  """
+
+  # make a list of strings separted by lines
+  converted = test_case.split('\n')
+
+  # remove empty values
+  while "" in converted:
+    converted.remove("")
+
+  # convert strings to numbers
+  converted = list(map(int, converted))
+
+  return converted
+
+
+# ****************** SOLUTION DRIVER CODE ******************
+if __name__ == "__main__":
+  def sonar_sweep_part_1():
+    linked_list = LinkedList()
+
+    linked_list.insert_many(convert_challenge_case(challenge_input))
+    linked_list.sweep()
+
+    print(f"PART 1: There are {linked_list.count} that are larger than the previous measurement")
+    return linked_list.count
+
+
+  def sonar_sweep_part_2():
+    linked_list = LinkedList()
+
+    linked_list.sliding_sum(convert_challenge_case(challenge_input))
+    linked_list.sweep()
+
+    print(f"PART 2: There are {linked_list.count} that are larger than the previous measurement")
+    return linked_list.count
+
+
+  sonar_sweep_part_1()
+  sonar_sweep_part_2()
